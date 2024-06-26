@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lauto sans-serif;
+}
+
+body {
+  background-color: #f1e4e6;
+}
+
+.pink {
+  color: #f16d7f;
+}
+
+._wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #222222;
+  min-height: 75px;
+  align-content: center;
+}
+
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left-item {
+  display: flex;
+  gap: 40px;
+}
+
+.header-right-item {
+  display: flex;
+  gap: 33px;
+}
+
+.header-button {
+  background: none;
+  border: none;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.right-header-list {
+  border-left: 12px solid #f16d7f;
+  padding-left: 16px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.title-h1 {
+  font-family: Lato;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 57.6px;
+  text-align: left;
+}
+
+.sub-title-h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+}
+
+.banner {
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 180px;
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  align-content: center;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(33, 22, 22, 0.7);
+  z-index: 1;
+}
+
+.for-woman {
+  background-image: url("../img/woman.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.for-man {
+  background-image: url("../img/man.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.for-kids {
+  background-image: url("../img/kids.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.accessories {
+  background-image: url("../img/accessories.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.card-title {
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sub-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+}
+
+.products {
+  margin-top: 96px;
+  text-align: center;
+}
+
+.product-list {
+  display: grid;
+  margin-top: 47px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+h2.title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #222222;
+  text-transform: capitalize;
+}
+
+h3.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.product-card {
+  background: rgba(248, 248, 248, 1);
+}
+
+.product-data {
+  padding: 23.35px 28.8px 20px 16.46px;
+	text-align: start;
+}
+
+.sub-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9f9f9f;
+}
+
+.price {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f16d7f;
+}
+
+.products-footer {
+  margin-top: 48px;
+}
+
+.product-button {
+  border: 1px solid rgba(255, 106, 106, 1);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f26376;
+  padding: 15px 39px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+}
+
+.product-button:hover {
+  color: #222222;
+  background: #f26376;
+  cursor: pointer;
+}
