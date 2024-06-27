@@ -63,7 +63,6 @@ body {
 }
 
 .title-h1 {
-  font-family: Lato;
   font-size: 48px;
   font-weight: 900;
   line-height: 57.6px;
@@ -175,13 +174,32 @@ h3.title {
   background: rgba(248, 248, 248, 1);
 }
 
+.card-img {
+  position: relative;
+}
+
+.card-img::before {
+  content: "";
+  position: absolute;
+  background: #3a3838db;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+  opacity: 0;
+}
+
+.card-img:hover::before {
+  opacity: 0.7;
+}
+
 .product-data {
   padding: 23.35px 28.8px 20px 16.46px;
-	text-align: start;
+  text-align: start;
 }
 
 .sub-title {
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -189,7 +207,6 @@ h3.title {
 }
 
 .price {
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -202,7 +219,6 @@ h3.title {
 
 .product-button {
   border: 1px solid rgba(255, 106, 106, 1);
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -212,7 +228,62 @@ h3.title {
 }
 
 .product-button:hover {
-  color: #222222;
+  color: #ffffff;
   background: #f26376;
   cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  ._wrapper {
+    max-width: 736px;
+  }
+
+  .header {
+    min-height: 74px;
+  }
+
+  .section-header {
+    max-width: 769px;
+  }
+
+  .main-img {
+    max-width: 386px;
+  }
+
+  .title-h1 {
+    font-size: 44px;
+    line-height: 52.8px;
+  }
+
+  .sub-title-h1 {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  .banner {
+    grid-template-rows: 167px 116px;
+    gap: 20px;
+  }
+
+  .products {
+    margin-top: 109px;
+  }
+
+  .product-list {
+    margin-top: 72px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .product-data {
+    padding-top: 25.35px;
+  }
+
+  .product-sub-title {
+    font-weight: 300;
+  }
+
+  .products-footer {
+    margin-top: 32px;
+  }
 }
