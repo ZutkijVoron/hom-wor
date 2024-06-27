@@ -287,3 +287,56 @@ h3.title {
     margin-top: 32px;
   }
 }
+@media (max-width: 736px) {
+  ._wrapper {
+    max-width: 343px;
+  }
+
+  .user-menu,
+  .shop-menu,
+  .main-img {
+    display: none;
+  }
+
+  .section-header {
+    max-width: 343px;
+    min-height: 363px;
+  }
+
+  .title-h1 {
+    font-size: 38px;
+    line-height: 45.6px;
+  }
+
+  .sub-title-h1 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 247px) 111px;
+    gap: 32px;
+  }
+
+	.accessories {
+		background-position: center;
+	}
+
+	.products {
+		margin-top: 64px;
+	}
+
+	.product-list {
+		margin-top: 64px;
+		grid-template-columns: 1fr;
+	}
+
+	.product-sub-title {
+		font-weight: 400;
+	}
+
+	.products-footer {
+		margin-top: 40.61px;
+	}
+}	
