@@ -108,6 +108,7 @@ body {
 .section-header {
   display: flex;
   align-items: center;
+	gap: 60px;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -496,6 +497,7 @@ h3.title {
   }
 
   .section-header {
+		gap: 39px;
     max-width: 769px;
   }
 
