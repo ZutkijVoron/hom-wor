@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #f1e4e6;
+  background-color: #fff;
 }
 
 .pink {
@@ -74,7 +74,7 @@ body {
   background-color: #fff;
   padding: 32px;
   gap: 20px;
-	flex-direction: column;
+  flex-direction: column;
 }
 
 .menu-title {
@@ -108,7 +108,7 @@ body {
 .section-header {
   display: flex;
   align-items: center;
-	gap: 60px;
+  gap: 60px;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -234,6 +234,9 @@ h3.title {
 
 .card-img {
   position: relative;
+  img {
+    max-width: 100%;
+  }
 }
 
 .card-img::before {
@@ -463,6 +466,12 @@ h3.title {
   color: #fff;
 }
 
+.footer__footer-content-icons {
+	display: grid;
+	gap: 7.3px;
+	grid-template-columns: repeat(4,1fr);
+}
+
 .footer__footer-content-icon {
   padding: 9px;
   border: none;
@@ -497,7 +506,7 @@ h3.title {
   }
 
   .section-header {
-		gap: 39px;
+    gap: 39px;
     max-width: 769px;
   }
 
