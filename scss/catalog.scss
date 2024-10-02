@@ -107,13 +107,11 @@
 
 .product {
 	&s {
-		margin-top: 96px;
 		text-align: center;
 	}
 
 	&-list {
 		display: grid;
-		margin-top: 47px;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
 	}
@@ -122,28 +120,147 @@
 		background: #f8f8f8;
 	}
 
-	&__main {
-		padding: 8px;
-		background: #f7f7f7;
+	&__sort {
+		position: relative;
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		min-height: 134px;
 
-		&__control {
-			background: #d8d8d8;
-			font-size: 20px;
-			font-weight: bold;
-			padding: 3px 10px;
-			cursor: pointer;
-			transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
-			&:hover {
-				color: $currentColor;
+		&__filter {
+			&__details {
+				position: absolute;
+				top: calc(50% - 17px);
+				left: 0;
+				padding: 17px 13px;
+				z-index: 1;
+
+				&__summary {
+					color: rgb(0, 0, 0);
+					font-size: 14px;
+					font-weight: 600;
+					line-height: 17px;
+					display: block;
+					transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+					padding-bottom: 17px;
+
+					&::-webkit-details-marker {
+						display: none;
+					}
+					& > svg {
+						transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+
+						height: 0.7rem;
+						margin-right: 11px;
+					}
+				}
+
+				&[open] > &__summary {
+					color: $currentColor;
+					& > svg {
+						fill: $currentColor;
+					}
+				}
+
+				&[open] {
+					background: #fff;
+					box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+				}
+
+				&__sidebar {
+					display: flex;
+					flex-direction: column;
+					gap: 18px;
+
+					&__details {
+						&__summary {
+							color: rgb(111, 110, 110);
+							font-size: 14px;
+							font-weight: 400;
+							line-height: 17px;
+							display: block;
+							transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+							border-left: 5px solid $currentColor;
+							border-bottom: 1px solid rgb(235, 235, 235);
+							padding: 8px 11px 11px;
+
+							&::-webkit-details-marker {
+								display: none;
+							}
+						}
+
+						&__options {
+							display: flex;
+							flex-direction: column;
+							gap: 11px;
+							padding: 17px 24px;
+							&__option {
+								text-decoration: none;
+								color: rgb(111, 110, 110);
+								font-size: 14px;
+								font-weight: 400;
+								line-height: 17px;
+								&:hover {
+									color: $currentColor;
+								}
+							}
+						}
+
+						&[open] > &__summary {
+							color: $currentColor;
+						}
+					}
+				}
 			}
 		}
 
-		&__img {
-			display: block;
-			width: unquote('min(645px, 80vw)');
+		&__select {
+			position: absolute;
+			left: 390px;
+			top: 50%;
+			display: flex;
+			gap: 28px;
+			color: rgb(111, 110, 110);
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 17px;
+			z-index: 1;
+			&__details {
+				position: relative;
+
+				&__summary {
+					display: block;
+
+					&::-webkit-details-marker {
+						display: none;
+					}
+
+					&::after {
+						content: '';
+						display: inline-flex;
+						background-image: url('../img/sort-product.svg');
+						background-repeat: no-repeat;
+						height: 0.5rem;
+						width: 1rem;
+					}
+				}
+
+				&__data {
+					z-index: 1;
+					position: absolute;
+					display: flex;
+					flex-direction: column;
+					gap: 6px;
+					top: 21px;
+					right: -9px;
+					min-width: 50px;
+					box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+					background: #fff;
+					padding: 9px;
+
+					input {
+						border: 1px solid rgb(235, 235, 235);
+					}
+				}
+			}
 		}
 	}
 
@@ -161,116 +278,6 @@
 		top: -23px;
 		max-width: fit-content;
 		margin: 0 auto;
-
-		&__data {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 32px;
-
-			&__top {
-				gap: 12px;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-			}
-
-			&__title {
-				color: $currentColor;
-				font-size: 14px;
-				font-weight: 300;
-				line-height: 17px;
-			}
-
-			&__line {
-				width: 63px;
-				height: 3px;
-				background-color: $currentColor;
-			}
-
-			&__sub-title {
-				color: rgb(77, 77, 77);
-				font-size: 18px;
-				font-weight: 300;
-				line-height: 22px;
-			}
-
-			&__p {
-				color: rgb(94, 94, 94);
-				padding-top: 12px;
-				font-size: 14px;
-				font-weight: 300;
-				line-height: 17px;
-				text-align: center;
-				max-width: 555px;
-			}
-
-			&__price {
-				color: $currentColor;
-				font-size: 24px;
-				font-weight: 300;
-				line-height: 29px;
-			}
-		}
-
-		&__line {
-			background-color: $currentColor;
-			height: 1px;
-			width: unquote('min(645px, 90%)');
-
-			margin: 0 auto;
-		}
-
-		&__filter {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 64px;
-
-			&__sort {
-				display: flex;
-				gap: 22px;
-
-				&__elem {
-					cursor: pointer;
-					svg {
-						width: 0.5rem;
-						height: 0.5rem;
-					}
-				}
-			}
-
-			&__btn {
-				display: flex;
-				justify-content: center;
-				padding: 14px 24px;
-				color: $currentColor;
-				font-size: 16px;
-				font-weight: 400;
-				line-height: 19px;
-				align-items: center;
-				gap: 23px;
-				outline: none;
-				border: 1px solid $currentColor;
-				background: none;
-				transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
-
-				svg {
-					fill: $currentColor;
-					transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
-					width: 2rem;
-					height: 2rem;
-				}
-
-				&:hover {
-					background: $currentColor;
-					color: #fff;
-					svg {
-						fill: #fff;
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -365,20 +372,23 @@ h3.title {
 
 	.product {
 		&s {
-			margin-top: 109px;
 			&-footer {
 				margin-top: 32px;
 			}
 		}
 
 		&-list {
-			margin-top: 72px;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 16px;
 		}
 
 		&-data {
 			padding-top: 25.35px;
+		}
+
+		&__sort__select {
+			left: auto;
+			right: 0;
 		}
 
 		&-sub-title {
@@ -439,14 +449,23 @@ h3.title {
 
 	.product {
 		&s {
-			margin-top: 64px;
 			&-footer {
 				margin-top: 40.61px;
 			}
 		}
 
+		&__sort__filter__details {
+			&__summary {
+				svg {
+					transform: scaleY(1.5);
+				}
+				&__text {
+					display: none;
+				}
+			}
+		}
+
 		&-list {
-			margin-top: 64px;
 			grid-template-columns: 1fr;
 		}
 

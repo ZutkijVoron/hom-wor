@@ -18,7 +18,6 @@ body {
 ._wrapper {
 	max-width: $maxWidthSite;
 	margin: 0 auto;
-	position: relative;
 }
 
 .header {
@@ -73,12 +72,13 @@ body {
 .drop-menu {
 	display: flex;
 	position: absolute;
-	right: 0;
-	top: 58px;
+	top: 75px;
 	background-color: #fff;
 	padding: 32px;
 	gap: 20px;
 	flex-direction: column;
+	z-index: 1;
+	right: 0;
 }
 
 .menu {

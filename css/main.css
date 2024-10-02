@@ -17,7 +17,6 @@ body {
 ._wrapper {
   max-width: 1140px;
   margin: 0 auto;
-  position: relative;
 }
 
 .header {
@@ -84,8 +83,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  right: 0;
-  top: 58px;
+  top: 75px;
   background-color: #fff;
   padding: 32px;
   gap: 20px;
@@ -93,6 +91,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 1;
+  right: 0;
 }
 
 .menu-title {
