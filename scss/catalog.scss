@@ -279,6 +279,36 @@
 		max-width: fit-content;
 		margin: 0 auto;
 	}
+
+	&__pagination {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 19px;
+		border: 1px solid rgb(235, 235, 235);
+		padding: 16px 12px;
+		display: flex;
+		gap: 17px;
+		justify-content: center;
+		max-width: fit-content;
+		margin: 0 auto;
+		&__control {
+			transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+
+			&:hover {
+				cursor: pointer;
+				color: $currentColor;
+			}
+		}
+		&__page {
+			transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+			color: rgb(196, 196, 196);
+			&:hover,
+			&.currant {
+				color: $currentColor;
+				cursor: pointer;
+			}
+		}
+	}
 }
 
 h2.title {
