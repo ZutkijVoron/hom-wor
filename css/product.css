@@ -505,6 +505,9 @@ h3.title {
   .product-sub-title {
     font-weight: 400;
   }
+  .product-data__filter__sort__elem {
+    font-size: 10px;
+  }
   .product-card:nth-child(even) {
     display: none;
   }

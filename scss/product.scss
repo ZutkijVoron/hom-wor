@@ -454,6 +454,10 @@ h3.title {
 			font-weight: 400;
 		}
 
+		&-data__filter__sort__elem {
+			font-size: 10px;
+		}
+
 		&-card {
 			&:nth-child(even) {
 				display: none;
