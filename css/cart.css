@@ -126,6 +126,18 @@
 
 .product__list__card__data__metadata__quantity__value {
   color: #6f6e6e;
+  border: 1px solid #eaeaea;
+  max-width: 44px;
+  margin-left: 24px;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+  text-align: center;
+}
+
+.product__list__card__data__metadata__quantity__value::-webkit-outer-spin-button, .product__list__card__data__metadata__quantity__value::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .product__list__card__close {

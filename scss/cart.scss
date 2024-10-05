@@ -96,6 +96,18 @@
 					&__quantity {
 						&__value {
 							color: rgb(111, 110, 110);
+							border: 1px solid #eaeaea;
+							max-width: 44px;
+							margin-left: 24px;
+							-moz-appearance: textfield;
+							appearance: textfield;
+							text-align: center;
+
+							&::-webkit-outer-spin-button,
+							&::-webkit-inner-spin-button {
+								-webkit-appearance: none;
+								margin: 0;
+							}
 						}
 					}
 				}

@@ -1,0 +1,219 @@
+.main__header {
+  background: #f8f3f4;
+  padding: 60px;
+  color: #636363;
+}
+
+.main__header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__header__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 128px;
+  padding-top: 64px;
+}
+
+.registration__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 34px;
+}
+
+.registration__form__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registration__form__inputs__title {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.registration__form__inputs__input {
+  color: #b1b1b1;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  padding: 13px 17px 16px;
+  border: 1px solid #a4a4a4;
+}
+
+.registration__form__inputs__description {
+  color: #b1b1b1;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  position: relative;
+  top: -5px;
+}
+
+.registration__form__radio {
+  color: black;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.registration__form__radio label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.registration__form__btn {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  background: #f16d7f;
+  outline: none;
+  border: none;
+  padding: 17px 29px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.registration__form__btn svg {
+  width: 17px;
+  height: 10px;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+  fill: #ffffff;
+}
+
+.registration__form__btn:hover {
+  color: #f16d7f;
+  background: #fff;
+}
+
+.registration__form__btn:hover svg {
+  fill: #f16d7f;
+}
+
+.registration__advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registration__advantages__title {
+  color: black;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+}
+
+.registration__advantages__text {
+  color: black;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+}
+
+.registration__advantages__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.registration__advantages__list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 23px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  list-style: none;
+}
+
+.registration__advantages__list__item::before {
+  content: url("../img/tick.svg");
+  height: 1rem;
+  width: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .section-header {
+    gap: 39px;
+    max-width: 769px;
+  }
+}
+
+@media (max-width: 736px) {
+  .main__header__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 32px;
+  }
+  .section-header {
+    max-width: 343px;
+    min-height: 363px;
+  }
+}
+/*# sourceMappingURL=registration.css.map */
