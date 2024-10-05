@@ -319,7 +319,7 @@ body {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   ._wrapper {
     max-width: 506.66667px;
   }

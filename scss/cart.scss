@@ -40,10 +40,11 @@
 			display: flex;
 			gap: 31px;
 			box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
-			min-width: min-content;
+			font-size: 22px;
+			max-width: fit-content;
 
 			&__img {
-				max-width: 262px;
+				max-width: unquote('min(20rem, 30%)');
 			}
 
 			&__data {
@@ -53,6 +54,7 @@
 				display: flex;
 				align-items: start;
 				gap: 42px;
+				max-width: min-content;
 
 				&__wrap {
 					display: flex;
@@ -63,7 +65,7 @@
 
 				&__title {
 					color: rgb(34, 34, 34);
-					font-size: 24px;
+					font-size: calc(1rem + 2px);
 					font-weight: 400;
 					line-height: 29px;
 					word-break: keep-all;
@@ -71,7 +73,7 @@
 
 				&__metadata {
 					color: rgb(87, 87, 87);
-					font-size: 22px;
+					font-size: 1rem;
 					font-weight: 400;
 					line-height: 26px;
 					display: flex;
@@ -288,35 +290,32 @@ h3.title {
 		max-width: 769px;
 	}
 
-	.title-h1 {
-		font-size: 44px;
-		line-height: 52.8px;
-	}
-
 	.sub-title-h1 {
 		font-size: 24px;
 		line-height: 28.8px;
 	}
 
-	.banner {
-		grid-template-rows: 167px 116px;
-		gap: 20px;
-	}
-
-	.advantage {
-		&s__list {
-			grid-template-columns: 360px;
-			justify-content: center;
-			padding-block: 48px;
+	.product {
+		grid-template-columns: repeat(1, 1fr);
+		&__bay {
+			&__wrap {
+				gap: 15px;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+			}
 		}
 
-		&-p {
-			font-weight: 300;
+		&__total-price {
+			margin-top: 0;
+		}
+
+		&__control {
+			grid-row: 2;
 		}
 	}
 }
 
-@media (max-width: 736px) {
+@media (max-width: 769px) {
 	.main__header__wrapper {
 		flex-direction: column;
 		align-items: center;
@@ -327,28 +326,42 @@ h3.title {
 		max-width: 343px;
 		min-height: 363px;
 	}
+	.product {
+		grid-template-columns: repeat(1, 1fr);
 
-	.title-h1 {
-		font-size: 38px;
-		line-height: 45.6px;
-	}
+		&__list {
+			&__card {
+				font-size: 14px;
+				gap: 17px;
 
-	.sub-title-h1 {
-		font-size: 20px;
-		line-height: 24px;
-	}
+				&__data {
+					padding-top: 13px;
 
-	.banner {
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(3, 247px) 111px;
-		gap: 32px;
-	}
+					&__wrap {
+						gap: 25px;
+						max-width: 170px;
+					}
+				}
 
-	.accessories {
-		background-position: center;
-	}
+				&__close {
+					gap: 31px;
+				}
+			}
+		}
 
-	.advantages__list {
-		gap: 46px;
+		&__bay {
+			&__wrap {
+				display: grid;
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
+
+		&__control {
+			grid-row: 2;
+			&__btn {
+				font-size: 12px;
+				padding: 9px 19px;
+			}
+		}
 	}
 }

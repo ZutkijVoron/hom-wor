@@ -141,20 +141,21 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 24px;
 }
 
 .registration__advantages__title {
   color: black;
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 29px;
+  line-height: calc(1rem + 5);
 }
 
 .registration__advantages__text {
   color: black;
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 29px;
+  line-height: calc(1rem + 5);
 }
 
 .registration__advantages__list {
@@ -172,14 +173,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 23px;
+  gap: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: black;
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 29px;
+  line-height: calc(1rem + 5);
   list-style: none;
 }
 
@@ -198,9 +199,12 @@
     gap: 39px;
     max-width: 769px;
   }
+  .registration {
+    gap: 22px;
+  }
 }
 
-@media (max-width: 736px) {
+@media (max-width: 768px) {
   .main__header__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -214,6 +218,15 @@
   .section-header {
     max-width: 343px;
     min-height: 363px;
+  }
+  .registration {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .registration__advantages {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=registration.css.map */

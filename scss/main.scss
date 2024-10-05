@@ -273,7 +273,7 @@ body {
 	}
 }
 
-@media (max-width: $phone) {
+@media (max-width: 768px) {
 	._wrapper {
 		max-width: $maxWidthPhone;
 	}
